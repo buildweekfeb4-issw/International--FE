@@ -26,24 +26,26 @@ const StudentContainer = styled.div`
 class Students extends Component {
   render() {
     return (
-      <div>        
+      <div>
         <h1>Student List</h1>
-          <StudentContainer>
-              {/* {this.props.students.map(student => {
-                return (
-                  <StudentContainer>
-                    <Student
-                      name={student.name}
-                      id={student.id}
-                      age={student.age}
-                      height={student.height}
-                      key={student.id}
-                    />
-                    <button onClick={() => this.props.delete(student.id)}>Student</button>
-                  </StudentContainer>
-                ); */}
-              })}
-          </StudentContainer>
+        <StudentContainer>
+          {/* {this.props.students.map(student => {
+            return (
+              <StudentContainer>
+                <Student
+                  name={student.name}
+                  id={student.id}
+                  age={student.age}
+                  height={student.height}
+                  key={student.id}
+                />
+                <button onClick={() => this.props.delete(student.id)}>
+                  Student
+                </button>
+              </StudentContainer>
+            );
+          })} */}
+        </StudentContainer>
       </div>
     );
   }
