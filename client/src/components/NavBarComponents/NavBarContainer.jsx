@@ -1,8 +1,11 @@
-import React from "react";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const NavBarContainer = props => {
   return (
-    <div></div>
+    <div>
+      <NavLink to='/AddChild'>Add Child</NavLink>
+    </div>
   );
 };
 

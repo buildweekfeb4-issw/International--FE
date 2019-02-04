@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
-import Login from '../Login/Login';
-
+import Login from '../LoginComponents/Login';
 
 const Authenticate = App =>
   class extends Component {
     constructor(props) {
       super(props);
       this.state = {
-        loggedIn: false,
-      }
+        loggedIn: false
+      };
     }
 
     componentDidMount() {
       if (!localStorage.getItem('user')) {
-        this.setState({loggedIn: false});
+        this.setState({ loggedIn: false });
       } else {
-        this.setState({loggedIn: true});
+        this.setState({ loggedIn: true });
       }
     }
 
@@ -25,4 +24,4 @@ const Authenticate = App =>
     }
   };
 
-  export default Authenticate;
+export default Authenticate;

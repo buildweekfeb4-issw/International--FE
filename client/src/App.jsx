@@ -1,9 +1,12 @@
 import React from 'react';
-import { Route } from "react-router-dom";
+import { Route } from 'react-router-dom';
 
 import './App.css';
 
+import authentication from './components/authentication/authentication';
+import HomePage from './components/HomePageComponents/HomePage';
 import NavBarContainer from './components/NavBarComponents/NavBarContainer';
+import ChildAddPage from './components/ChildComponents/ChildAddPage';
 
 class App extends React.Component {
   state = {
@@ -14,15 +17,19 @@ class App extends React.Component {
     return (
       <div className='App'>
         <Route
+          exact
           path='/'
-          render={props =>
-            this.state.loggedInUser ? <NavBarContainer /> : <div>LOG IN</div>
-          }
+          render={props => (
+            <>
+              <NavBarContainer />
+              <HomePage />
+            </>
+          )}
         />
-        <NavBarContainer />
+        <Route path='/addchild' component={ChildAddPage} />
       </div>
     );
   }
 }
 
-export default App;
+export default authentication(App);
