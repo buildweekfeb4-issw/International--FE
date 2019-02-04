@@ -1,12 +1,25 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Route } from "react-router-dom";
 
 import './App.css';
 
-class App extends Component {
+import NavBarContainer from './components/NavBarComponents/NavBarContainer';
+
+class App extends React.Component {
+  state = {
+    loggedInUser: ''
+  };
+
   render() {
     return (
-      <div className="App">
-
+      <div className='App'>
+        <Route
+          path='/'
+          render={props =>
+            this.state.loggedInUser ? <NavBarContainer /> : <div>LOG IN</div>
+          }
+        />
+        <NavBarContainer />
       </div>
     );
   }
