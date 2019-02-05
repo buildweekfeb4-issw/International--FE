@@ -32,7 +32,7 @@ app.post('/api/users/login', (req, res) => {
   if (foundUser) {
     res.status(200).json(foundUser.id);
   } else {
-    res.json({username, password});
+    res.sendStatus(403);
   }
 });
 
