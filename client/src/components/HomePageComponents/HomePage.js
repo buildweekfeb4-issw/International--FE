@@ -41,8 +41,13 @@ class Students extends Component {
                     />
                     <button onClick={() => this.props.delete(student.id)}>Student</button>
                   </StudentContainer>
+<<<<<<< HEAD:client/src/components/HomePageComponents/HomePage.js
                 );
               })} */}
+=======
+                ); */}
+              })}
+>>>>>>> b2bf1663aacca78d6af2086d194025ab5063290f:client/src/components/HomePageComponents/HomePage.js
           </StudentContainer>
       </div>
     );

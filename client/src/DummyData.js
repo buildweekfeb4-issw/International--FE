@@ -9,4 +9,3 @@ const Users = [
         password: "ajfrierson"
     },
 ]
-
