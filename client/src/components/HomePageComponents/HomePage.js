@@ -41,8 +41,8 @@ class Students extends Component {
                     />
                     <button onClick={() => this.props.delete(student.id)}>Student</button>
                   </StudentContainer>
-                ); */}
-              })}
+                );
+              })} */}
           </StudentContainer>
       </div>
     );
