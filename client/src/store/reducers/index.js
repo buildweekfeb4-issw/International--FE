@@ -1,12 +1,21 @@
-import { combineReducers } from "redux";
+// import { combineReducers } from 'redux';
 
+// import loginReducer from './loginReducer';
+// import childReducer from './childReducer';
 
-// Import your reducers here
-// [example] import sampleReducer from "path";
+// export default combineReducers({
+//   loginReducer,
+//   childReducer
+// });
+
+import { combineReducers } from 'redux';
+
+import registration from "./registration";
+import loginReducer from './loginReducer';
+import childReducer from './childReducer';
 
 export default combineReducers({
-  // Add reducers
-  // [example] reducer1, reducer2... etc.
+  registration,
+  loginReducer,
+  childReducer
 });
-
-
