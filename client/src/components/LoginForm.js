@@ -12,13 +12,14 @@ const LoginForm = props => {
 
   return (
     <form onSubmit={login}>
+      <h2>Login</h2>
       <div>
         <label htmlFor='loginUsername'>Username</label>
         <input
           type='text'
           id='loginUsername'
           name='loginUsername'
-          placeholder='Enter username'
+          placeholder='Username'
           required
           value={props.loginUsername}
           onChange={props.handleTextInputChange}
@@ -30,7 +31,7 @@ const LoginForm = props => {
           type='password'
           id='loginPassword'
           name='loginPassword'
-          placeholder='Enter password'
+          placeholder='Password'
           required
           value={props.loginPassword}
           onChange={props.handleTextInputChange}

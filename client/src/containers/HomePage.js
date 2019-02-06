@@ -1,62 +1,58 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { connect } from 'react-redux';
 
-import { getChildren, logout } from '../store/actions';
+import './PageStyles.css';
 
-import './HomePageStyles.css';
-
-import '../components/ChildGridItem';
-import ChildGridItem from '../components/ChildGridItem';
+import NavBar from '../components/NavBar';
+import HomeChildGrid from '../components/HomeChildGrid';
+import ChildAddPage from './ChildAddPage';
+import ChildViewPage from './ChildViewPage';
 
 class HomePage extends React.Component {
-  static propTypes = {
-    children: PropTypes.arrayOf(
-      PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        status: PropTypes.string.isRequired,
-        age: PropTypes.number.isRequired,
-        insuranceCard: PropTypes.string,
-        birthCertificateExpires: PropTypes.string,
-        specialNeeds: PropTypes.string,
-        representative: PropTypes.string,
-        contactInfo: PropTypes.string
-      })
-    ).isRequired,
-    getChildren: PropTypes.func.isRequired,
-    logout: PropTypes.func.isRequired
+  state = {
+    currentPage: 'Home',
+    currentChild: null
   };
 
-  componentDidMount() {
-    this.props.getChildren();
-  }
+  // changePage = (page, child) => {
+  //   this.setState({
+  //     currentPage: page,
+  //     currentChild: page === 'SingleChildView' && child ? child : null
+  //   });
+  // };
+
+  changePage = (page, child) => {
+    this.setState({
+      currentPage: page,
+      currentChild: page === 'ChildView' && child ? child : null
+    });
+  };
 
   render() {
-    return (
-      <>
-        <div>Home</div>
-        <button type='button' onClick={this.props.logout}>
-          Log Out
-        </button>
-        <div className='childrenGrid'>
-          {this.props.children.map(child => (
-            <ChildGridItem key={child.id} child={child} />
-          ))}
-        </div>
-      </>
-    );
+    switch (this.state.currentPage) {
+      case 'Home':
+        return (
+          <>
+            <NavBar changePage={this.changePage} />
+            <HomeChildGrid changePage={this.changePage} />
+          </>
+        );
+      case 'ChildAdd': //removed Single
+        return (
+          <>
+            <NavBar changePage={this.changePage} />
+            <ChildAddPage />                    
+          </>
+        );
+      case 'ChildView':
+        return (
+          <>
+            <NavBar changePage={this.changePage} />
+            <ChildViewPage child={this.state.currentChild} />
+          </>
+        );
+      default:
+        return null;
+    }
   }
 }
-const mapStateToProps = state => {
-  return {
-    children: state.childReducer.children
-  };
-};
-export default connect(
-  mapStateToProps,
-  {
-    getChildren,
-    logout
-  }
-)(HomePage);
-
+export default HomePage;
