@@ -93,7 +93,7 @@ class StudentGrid extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    students: state.studentDataReducer.students
+    students: state.childReducer.students
   };
 };
 

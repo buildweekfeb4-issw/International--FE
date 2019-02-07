@@ -38,7 +38,7 @@ let initialState = {
   error: null
 };
 
-const studentDataReducer = (state = initialState, action) => {
+const childReducer = (state = initialState, action) => {
   switch (action.type) {
     case HANDLE_TEXT_INPUT_CHANGE:
       return {
@@ -177,4 +177,4 @@ const studentDataReducer = (state = initialState, action) => {
   }
 };
 
-export default studentDataReducer;
+export default childReducer;
