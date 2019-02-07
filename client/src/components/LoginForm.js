@@ -19,7 +19,7 @@ const LoginForm = props => {
           type='text'
           id='loginUsername'
           name='loginUsername'
-          placeholder='Username'
+          placeholder='Enter username'
           required
           value={props.loginUsername}
           onChange={props.handleTextInputChange}
@@ -31,7 +31,7 @@ const LoginForm = props => {
           type='password'
           id='loginPassword'
           name='loginPassword'
-          placeholder='Password'
+          placeholder='Enter password'
           required
           value={props.loginPassword}
           onChange={props.handleTextInputChange}

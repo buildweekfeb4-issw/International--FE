@@ -10,12 +10,14 @@
 
 import { combineReducers } from 'redux';
 
-import registration from "./registration";
+import registrationReducer from "./registrationReducer";
 import loginReducer from './loginReducer';
-import childReducer from './childReducer';
+import studentDataReducer from './studentDataReducer.js';
 
 export default combineReducers({
-  registration,
+  registrationReducer,
   loginReducer,
-  childReducer
+  studentDataReducer
 });
+
+

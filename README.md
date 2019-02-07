@@ -1,4 +1,4 @@
-# International-UI
+# International-UI (Alvin Frierson)
 
 MVP Features Breakdown:
 

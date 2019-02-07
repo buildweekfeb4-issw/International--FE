@@ -22,7 +22,7 @@ const RegistrationForm = props => {
           type='text'
           id='registrationUsername'
           name='registrationUsername'
-          placeholder='Username'
+          placeholder='Enter username'
           required
           value={props.registrationUsername}
           onChange={props.handleTextInputChange}
@@ -34,14 +34,14 @@ const RegistrationForm = props => {
           type='password'
           id='registrationPassword'
           name='registrationPassword'
-          placeholder='Password'
+          placeholder='Enter password'
           required
           value={props.registrationPassword}
           onChange={props.handleTextInputChange}
         />
       </div>
       <div>
-        <button>Register Now</button>
+        <button>Log In</button>
       </div>
     </form>
   );
@@ -56,8 +56,8 @@ RegistrationForm.propTypes = {
 
 const mapStateToProps = state => {
   return {
-    registrationUsername: state.registration.registrationUsername,
-    registrationPassword: state.registration.registrationPassword
+    registrationUsername: state.registrationReducer.registrationUsername,
+    registrationPassword: state.registrationReducer.registrationPassword
   };
 };
 
