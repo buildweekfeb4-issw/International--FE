@@ -194,15 +194,15 @@ class StudentInfoForm extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    newStudentName: state.studentDataReducer.newStudentName,
-    newStudentStatus: state.studentDataReducer.newStudentStatus,
-    newStudentAge: state.studentDataReducer.newStudentAge,
+    newStudentName: state.childReducer.newStudentName,
+    newStudentStatus: state.childReducer.newStudentStatus,
+    newStudentAge: state.childReducer.newStudentAge,
     newStudentInsuranceExpiry:
-      state.studentDataReducer.newStudentInsuranceExpiry,
-    newStudentBirthCert: state.studentDataReducer.newStudentBirthCert,
-    newStudentSpecialNeeds: state.studentDataReducer.newStudentSpecialNeeds,
-    newStudentRepresentative: state.studentDataReducer.newStudentRepresentative,
-    newStudentContactInfo: state.studentDataReducer.newStudentContactInfo
+      state.childReducer.newStudentInsuranceExpiry,
+    newStudentBirthCert: state.childReducer.newStudentBirthCert,
+    newStudentSpecialNeeds: state.childReducer.newStudentSpecialNeeds,
+    newStudentRepresentative: state.childReducer.newStudentRepresentative,
+    newStudentContactInfo: state.childReducer.newStudentContactInfo
   };
 };
 
