@@ -101,7 +101,7 @@ class ViewPage extends React.Component {
 
 const mapStateToProps = state => {
   return {
-    currentViewedStudent: state.studentDataReducer.currentViewedStudent
+    currentViewedStudent: state.childReducer.currentViewedStudent
   };
 };
 
