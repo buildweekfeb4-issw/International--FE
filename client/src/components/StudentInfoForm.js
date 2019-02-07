@@ -78,116 +78,118 @@ class StudentInfoForm extends React.Component {
     }
 
     return (
-      <form onSubmit={submitButtonAction}>
-        <div>
-          <label htmlFor='newStudentName'>Name</label>
-          <input
-            type='text'
-            id='newStudentName'
-            name='newStudentName'
-            placeholder='Enter name'
-            required
-            value={this.props.newStudentName}
-            onChange={this.props.handleTextInputChange}
-          />
-        </div>
-        <div>
-          <label htmlFor='newStudentStatus'>Student status</label>
-          <select
-            id='newStudentStatus'
-            name='newStudentStatus'
-            required
-            value={this.props.newStudentStatus}
-            onChange={this.props.handleTextInputChange}
-          >
-            <option disabled value=''>
-              Select a student status
-            </option>
-            <option value='student'>Student</option>
-            <option value='past student'>Past student</option>
-            <option value='visitor'>Visitor</option>
-          </select>
-        </div>
-        <div>
-          <label htmlFor='newStudentAge'>Age</label>
-          <input
-            type='number'
-            min='0'
-            id='newStudentAge'
-            name='newStudentAge'
-            placeholder='Age'
-            required
-            value={this.props.newStudentAge}
-            onChange={this.props.handleTextInputChange}
-          />
-        </div>
-        <div>
-          <label htmlFor='newStudentInsuranceExpiry'>
-            Insurance expiration date
-          </label>
-          <input
-            type='text'
-            id='newStudentInsuranceExpiry'
-            name='newStudentInsuranceExpiry'
-            placeholder="Enter expiry date of student's insurance card"
-            value={this.props.newStudentInsuranceExpiry}
-            onChange={this.props.handleTextInputChange}
-          />
-        </div>
-        <div>
-          <label htmlFor='newStudentBirthCert'>Birth certificate</label>
-          <input
-            type='text'
-            id='newStudentBirthCert'
-            name='newStudentBirthCert'
-            placeholder="Enter student's birth certificate"
-            value={this.props.newStudentBirthCert}
-            onChange={this.props.handleTextInputChange}
-          />
-        </div>
-        <div>
-          <label htmlFor='newStudentSpecialNeeds'>Special needs</label>
-          <input
-            type='text'
-            id='newStudentSpecialNeeds'
-            name='newStudentSpecialNeeds'
-            placeholder='Enter special needs of student'
-            required
-            value={this.props.newStudentSpecialNeeds}
-            onChange={this.props.handleTextInputChange}
-          />
-        </div>
-        <div>
-          <label htmlFor='newStudentRepresentative'>
-            Student's representative
-          </label>
-          <input
-            type='text'
-            id='newStudentRepresentative'
-            name='newStudentRepresentative'
-            placeholder="Enter name of student's representative"
-            value={this.props.newStudentRepresentative}
-            onChange={this.props.handleTextInputChange}
-          />
-        </div>
-        <div>
-          <label htmlFor='newStudentContactInfo'>Contact Info</label>
-          <input
-            type='text'
-            id='newStudentContactInfo'
-            name='newStudentContactInfo'
-            placeholder="Enter student's contact information"
-            value={this.props.newStudentContactInfo}
-            onChange={this.props.handleTextInputChange}
-          />
-        </div>
-        <div>
-          <button type='button' onClick={this.props.clearNewStudentInfo}>
-            Clear
-          </button>
-          {submitButtonText && <button>{submitButtonText}</button>}
-        </div>
-      </form>
+      <div className='newStudents'>
+        <form onSubmit={submitButtonAction}>
+          <div>
+            <label htmlFor='newStudentName'>Name</label>
+            <input
+              type='text'
+              id='newStudentName'
+              name='newStudentName'
+              placeholder='Enter name'
+              required
+              value={this.props.newStudentName}
+              onChange={this.props.handleTextInputChange}
+            />
+          </div>
+          <div>
+            <label htmlFor='newStudentStatus'>Student status</label>
+            <select
+              id='newStudentStatus'
+              name='newStudentStatus'
+              required
+              value={this.props.newStudentStatus}
+              onChange={this.props.handleTextInputChange}
+            >
+              <option disabled value=''>
+                Select a student status
+              </option>
+              <option value='student'>Student</option>
+              <option value='past student'>Past student</option>
+              <option value='visitor'>Visitor</option>
+            </select>
+          </div>
+          <div>
+            <label htmlFor='newStudentAge'>Age</label>
+            <input
+              type='number'
+              min='0'
+              id='newStudentAge'
+              name='newStudentAge'
+              placeholder='Age'
+              required
+              value={this.props.newStudentAge}
+              onChange={this.props.handleTextInputChange}
+            />
+          </div>
+          <div>
+            <label htmlFor='newStudentInsuranceExpiry'>
+              Insurance expiration date
+            </label>
+            <input
+              type='text'
+              id='newStudentInsuranceExpiry'
+              name='newStudentInsuranceExpiry'
+              placeholder="Enter expiry date of student's insurance card"
+              value={this.props.newStudentInsuranceExpiry}
+              onChange={this.props.handleTextInputChange}
+            />
+          </div>
+          <div>
+            <label htmlFor='newStudentBirthCert'>Birth certificate</label>
+            <input
+              type='text'
+              id='newStudentBirthCert'
+              name='newStudentBirthCert'
+              placeholder="Enter student's birth certificate"
+              value={this.props.newStudentBirthCert}
+              onChange={this.props.handleTextInputChange}
+            />
+          </div>
+          <div>
+            <label htmlFor='newStudentSpecialNeeds'>Special needs</label>
+            <input
+              type='text'
+              id='newStudentSpecialNeeds'
+              name='newStudentSpecialNeeds'
+              placeholder='Enter special needs of student'
+              required
+              value={this.props.newStudentSpecialNeeds}
+              onChange={this.props.handleTextInputChange}
+            />
+          </div>
+          <div>
+            <label htmlFor='newStudentRepresentative'>
+              Student's representative
+            </label>
+            <input
+              type='text'
+              id='newStudentRepresentative'
+              name='newStudentRepresentative'
+              placeholder="Enter name of student's representative"
+              value={this.props.newStudentRepresentative}
+              onChange={this.props.handleTextInputChange}
+            />
+          </div>
+          <div>
+            <label htmlFor='newStudentContactInfo'>Contact Info</label>
+            <input
+              type='text'
+              id='newStudentContactInfo'
+              name='newStudentContactInfo'
+              placeholder="Enter student's contact information"
+              value={this.props.newStudentContactInfo}
+              onChange={this.props.handleTextInputChange}
+            />
+          </div>
+          <div>
+            <button type='button' onClick={this.props.clearNewStudentInfo}>
+              Clear
+            </button>
+            {submitButtonText && <button>{submitButtonText}</button>}
+          </div>
+        </form>
+      </div> 
     );
   }
 }
