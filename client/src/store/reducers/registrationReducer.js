@@ -12,7 +12,7 @@ let initialState = {
   error: null
 };
 
-const registration = (state = initialState, action) => {
+const registrationReducer = (state = initialState, action) => {
   switch (action.type) {
     case HANDLE_TEXT_INPUT_CHANGE:
       return {
@@ -45,4 +45,4 @@ const registration = (state = initialState, action) => {
   }
 };
 
-export default registration;
+export default registrationReducer;
